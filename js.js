@@ -364,33 +364,26 @@ $(function(){
       return false;
   });
 
-  var client_img = new ZeroClipboard( $(".da-copy-img-url"), {
-          moviePath: "ZeroClipboard.swf",
-          debug: false
+
+
+  // clipboard
+  var clipboard = new Clipboard('.da-copy');
+
+  clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
   });
 
-  client_img.on( "load", function(client_img) {
-    console.log( "movie is loaded" );
-
-    client_img.on( "complete", function(client_img, args) {
-      // `this` is the element that was clicked
-      client_img.setText(args.text);
-      console.log( args.text );
-      } );
-  } );
-
-  /*$('.da-copy-img-url').click(function (event) {
-      event.preventDefault();
-
-      var img_url = $('.copy-img-url-container').text();
-
-      //client_img.setText(img_url);
-
-      console.log(img_url);
+  clipboard.on('error', function(e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+  });
 
 
-      return false;
-  });*/
+
 });
 
 /*

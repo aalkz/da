@@ -4,7 +4,7 @@
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' type='text/javascript' charset='utf-8'></script>
   <script src='underscore-min.js'></script>
-  <script src='ZeroClipboard.min.js' type='text/javascript' charset='utf-8'></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script src='js.js' type='text/javascript' charset='utf-8'></script>
   <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css' type='text/css' media='screen'>
   <link rel='stylesheet' href='style.css' type='text/css' media='screen'>
@@ -24,16 +24,18 @@
   <div class="da-info">
     <ul>
       <li class="da-img-url">
-        <input type="button" text="Copy" value="Copy" class="da-copy da-copy-img-url" data-clipboard-target="copy-img-url-container"> 
+        <input type="button" text="Copy" value="Copy img url" class="da-copy da-copy-img-url" data-clipboard-target=".copy-img-url-container"> 
         img-url: <a href="#" class="da-img-url-link da-copy"></a>
         <br>
         <textarea value="" class="copy-img-url-container" rows="5" cols="300"></textarea>
       </li>
       <li class="da-title">
-        <input type="button" text="Copy" value="Copy" class="da-copy da-copy-title">
+        <input type="button" text="Copy title" value="Copy title" class="da-copy da-copy-title" data-clipboard-target=".copy-title-container">
         title: <a href="#" class="da-title-link da-copy"></a></li>
         <br>
         <textarea value="" class="copy-title-container" rows="5" cols="300"></textarea>
+        <br>
+        <input type="button" text="Copy HTML" value="Copy HTML" class="da-copy da-copy-html" data-clipboard-target=".copy-title-html-container">
         <br>
         <textarea value="" class="copy-title-html-container" rows="5" cols="300"></textarea>
     </ul>
