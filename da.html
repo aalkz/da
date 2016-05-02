@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' type='text/javascript' charset='utf-8'></script>
+  <script src='underscore-min.js'></script>
+  <script src='ZeroClipboard.min.js' type='text/javascript' charset='utf-8'></script>
+  <script src='js.js' type='text/javascript' charset='utf-8'></script>
+  <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css' type='text/css' media='screen'>
+  <link rel='stylesheet' href='style.css' type='text/css' media='screen'>
+
+</head>
+<body>
+
+	<form id='search'>
+          <div class="input-append">
+            <input class='search-tag' type='text' tabindex='1' value='' />
+            <button class="btn" id="search-button" dir="ltr" tabindex="2" type="submit">
+              <i class='icon-search'></i>
+        </button>
+      </div>
+  </form>
+
+  <div class="da-info">
+    <ul>
+      <li class="da-img-url">
+        <input type="button" text="Copy" value="Copy" class="da-copy da-copy-img-url" data-clipboard-target="copy-img-url-container"> 
+        img-url: <a href="#" class="da-img-url-link da-copy"></a>
+        <br>
+        <textarea value="" class="copy-img-url-container" rows="5" cols="300"></textarea>
+      </li>
+      <li class="da-title">
+        <input type="button" text="Copy" value="Copy" class="da-copy da-copy-title">
+        title: <a href="#" class="da-title-link da-copy"></a></li>
+        <br>
+        <textarea value="" class="copy-title-container" rows="5" cols="300"></textarea>
+        <br>
+        <textarea value="" class="copy-title-html-container" rows="5" cols="300"></textarea>
+    </ul>
+  </div>
+
+</body>
+</html>
